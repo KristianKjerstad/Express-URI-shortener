@@ -15,7 +15,7 @@
 <body>
     <div class="container" >
         <h1>URL Shrinker</h1>
-        <form action="" method="POST" class="my-4 row g-3">
+        <form action="/shortUrls" method="POST" class="my-4 row g-3">
             <div class="col-md-8">
                 <input type="url" name="fullUrl" id="fullUrl" placeholder="url" required class="form-control">
             </div>
@@ -33,11 +33,14 @@
                 </tr>
             </thead>
             <tbody>
+                <% shortUrls.forEach(shortUrl => { %>
                 <tr>
-                    <td><a href="https://vg.no">vg.no</a></td>
-                    <td><a href="/123123">123123</a></td>
-                    <td>10</td>
+                    <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                    <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                    <td><%= shortUrl.clicks %></td>
                 </tr>
+                <% }) %>
+
             </tbody>
         </table>
     </div>
