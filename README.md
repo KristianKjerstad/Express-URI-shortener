@@ -1,6 +1,9 @@
-# Express-URI-shortener
-Express-URI-shortener
+# Express JS URI shortener
+![Screenshot](screenshot.png)
 
+A simple node JS / Express JS web application for shortening urls. 
+
+Bootstrap is used for styling, and a mongodb database is used for storing the data.
 
 # How to run
 
